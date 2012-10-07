@@ -1,0 +1,22 @@
+Protokół binarny gry:
+
+Projekt realizuje prosty, strumieniowy protokół binarny, budujący pakiety zgodnie ze schematem:
+<id - unikalne> <size - rozmiar danych wysyłanych przez pakiet> <dane>
+
+Wykorzystujemy silne typowanie, sprowadzając format danych do structów z C w porządku bitów big-endian (standardowy porządek sieciowy).
+
+Reprezentacja pojedyńczych typów w protokole:
+* uint (unsigned int) - 4 bajty
+  Reprezentacja jest zgodna z reprezentacją C, wymuszając porządek big-endian.
+
+* int - 4 bajty
+Tu jak wyżej.
+
+* float - 4 bajty
+Zgodnie ze standardem C.
+
+* string - n + 2 bajtów
+Korzystamy z następującej konwencji (ukradzionej, o ile dobrze pamiętam, z Pascala).
+
+Stringa przechowujemy jako <short int> <string>, gdzie short int oznacza nam długość
+naszego ciągu znaków.
