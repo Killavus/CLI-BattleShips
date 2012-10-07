@@ -4,16 +4,18 @@
 import socket
 import select
 
+from collections import deque
+
+from GameState import GameState
+from Logger import Logger
+
+from config.JSONConfig import JSONConfig
+from protocol.Protocol import Protocol
+
 # Hack na obsługę zdarzenia EPOLLRDHUP - z jakiegoś powodu Pythonowa 
 # implementacja nie definiuje tego przydatnego symbolu.
 if not "EPOLLRDHUP" in dir(select):
   select.EPOLLRDHUP = 0x2000
-
-from collections import deque
-from config.JSONConfig import JSONConfig
-from GameState import GameState
-from protocol.Protocol import Protocol
-from Logger import Logger
 
 class Server(object):
   def __init__(self):

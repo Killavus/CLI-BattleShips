@@ -1,3 +1,5 @@
+# Encoding: utf-8
+
 class Ship(object):
   """
   Obiekt statku, który udostępnia potrzebne do rozegrania gry metody.

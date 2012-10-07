@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # Encoding: utf-8
 
+import sys
 import socket
 import select
 import struct
-from collections import deque
 
-import sys
+from collections import deque
 
 from protocol.PacketReader import PacketReader
 from protocol.PacketWriter import PacketWriter

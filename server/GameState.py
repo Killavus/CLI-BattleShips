@@ -1,7 +1,7 @@
 # Encoding: utf-8
-from objects.Ship import Ship
-
 import random
+
+from objects.Ship import Ship
 
 class GameState(object):
   """

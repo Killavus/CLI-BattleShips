@@ -3,9 +3,6 @@
 from config.AbstractConfig import *
 import json
 
-class ConfigError(Exception):
-  pass
-
 class JSONConfig(AbstractConfig):
   """
   Klasa realizująca czytanie pliku konfiguracyjnego zapisanego w technologii JSON.
@@ -27,6 +24,7 @@ class JSONConfig(AbstractConfig):
 
     self.__caching = {}
   
+
   def lookup(self, config_string):
     """
     Metoda realizująca klasę abstrakcyjną AbstractConfig.

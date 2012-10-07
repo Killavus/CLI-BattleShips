@@ -10,9 +10,10 @@ class AbstractConfig:
 
     Zawsze zwraca wyjątek. Ten konstruktor powinien być przeciążony przez klasy potomne.
     """
-    raise "You can not initialize AbstractConfig class."
+    raise ConfigError("You can not initialize AbstractConfig class.")
 
-  # Config strings are in format:
+
+  # Stringi konfiguracyjne w formacie:
   # (<category>.)*<item>
   def lookup(self, config_string):
     """
@@ -22,7 +23,8 @@ class AbstractConfig:
 
     Każda klasa potomna musi przeciążyć tą metodę.
     """
-    raise 'Not implemented'
+    raise ConfigError('Not implemented')
+
 
   def __getitem__(self, i):
     """
