@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>server.objects.Ship.Ship</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="server-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="server-module.html">Package&nbsp;server</a> ::
+        <a href="server.objects-module.html">Package&nbsp;objects</a> ::
+        <a href="server.objects.Ship-module.html">Module&nbsp;Ship</a> ::
+        Class&nbsp;Ship
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="server.objects.Ship.Ship-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Ship</h1><p class="nomargin-top"><span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_server_o" name="uml_class_diagram_for_server_o">
+<area shape="rect" id="node1_7" href="server.objects.Ship.Ship-class.html#__init__" title="Konstruktor klasy." alt="" coords="17,39,249,57"/>
+<area shape="rect" id="node1_8" href="server.objects.Ship.Ship-class.html#tiles" title="Zwraca list&#281; kratek, kt&#243;re zajmuje nasz statek." alt="" coords="17,57,249,76"/>
+<area shape="rect" id="node1_9" href="server.objects.Ship.Ship-class.html#get_player" title="Zwraca gracza, do kt&#243;rego nale&#380;y statek." alt="" coords="17,76,249,95"/>
+<area shape="rect" id="node1_10" href="server.objects.Ship.Ship-class.html#destroyed" title="Sprawdza, czy statek zosta&#322; ca&#322;kowicie zniszczony." alt="" coords="17,95,249,113"/>
+<area shape="rect" id="node1_11" href="server.objects.Ship.Ship-class.html#shooted" title="Sprawdza, czy dane pozycje (x,y) to pozycje, w kt&#243;re mo&#380;na &#39;strzeli&#263;&#39; dany &#160;statek." alt="" coords="17,113,249,132"/>
+<area shape="rect" id="node1_12" href="server.objects.Ship.Ship-class.html#tile_destroyed" title="Sprawdza, czy dana kratka statku zosta&#322;a zniszczona." alt="" coords="17,132,249,151"/>
+<area shape="rect" id="node1_13" href="server.objects.Ship.Ship-class.html#destroy" title="Ustawia dan&#261; kratk&#281; statku jako &quot;zniszczon&#261;&quot;." alt="" coords="17,151,249,169"/>
+<area shape="rect" id="node1" href="server.objects.Ship.Ship-class.html" title="Obiekt statku, kt&#243;ry udost&#281;pnia potrzebne do rozegrania gry metody." alt="" coords="5,6,261,175"/>
+</map>
+  <img src="uml_class_diagram_for_server_o.gif" alt='' usemap="#uml_class_diagram_for_server_o" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Obiekt statku, kt&#243;ry udost&#281;pnia potrzebne do rozegrania gry 
+  metody.</p>
+  <p>Posiada metody, kt&#243;re modyfikuj&#261; wewn&#281;trzny stan obiektu oraz 
+  akcesory. Ich wykorzystanie zgodnie z zasadami gry nie jest zapewniane - 
+  to ma zapewni&#263; klasa GameState.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.objects.Ship.Ship-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">ship_len</span>,
+        <span class="summary-sig-arg">ori</span>,
+        <span class="summary-sig-arg">player</span>)</span><br />
+      Konstruktor klasy.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="tiles"></a><span class="summary-sig-name">tiles</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Zwraca list&#281; kratek, kt&#243;re zajmuje nasz statek.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.tiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_player"></a><span class="summary-sig-name">get_player</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Zwraca gracza, do kt&#243;rego nale&#380;y statek.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.get_player">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.objects.Ship.Ship-class.html#destroyed" class="summary-sig-name">destroyed</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Sprawdza, czy statek zosta&#322; ca&#322;kowicie zniszczony.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.destroyed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.objects.Ship.Ship-class.html#shooted" class="summary-sig-name">shooted</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Sprawdza, czy dane pozycje (x,y) to pozycje, w kt&#243;re mo&#380;na 'strzeli&#263;'
+      dany statek.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.shooted">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="tile_destroyed"></a><span class="summary-sig-name">tile_destroyed</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Sprawdza, czy dana kratka statku zosta&#322;a zniszczona.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.tile_destroyed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="destroy"></a><span class="summary-sig-name">destroy</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Ustawia dan&#261; kratk&#281; statku jako &quot;zniszczon&#261;&quot;.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.destroy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>,
+        <span class="sig-arg">ship_len</span>,
+        <span class="sig-arg">ori</span>,
+        <span class="sig-arg">player</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Konstruktor klasy.</p>
+  <p>Na podstawie argument&#243;w oblicza przestrze&#324;, kt&#243;r&#261; statek zajmuje, oraz
+  sprawdza, oraz definiuje pomocnicze struktury. Zapisuje r&#243;wnie&#380; statek do
+  odpowiedniego gracza.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="destroyed"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">destroyed</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.destroyed">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sprawdza, czy statek zosta&#322; ca&#322;kowicie zniszczony.</p>
+  <p>Ca&#322;kowite zniszczenie jest wtedy, kiedy wszystkie kratki, kt&#243;re 
+  zajmuje statek, zosta&#322;y strzelone przez gracza dru&#380;yny przeciwnej.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="shooted"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">shooted</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.objects.Ship-pysrc.html#Ship.shooted">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sprawdza, czy dane pozycje (x,y) to pozycje, w kt&#243;re mo&#380;na 'strzeli&#263;' 
+  dany statek.</p>
+  <p>W szczeg&#243;lno&#347;ci, je&#380;eli pole zosta&#322;o ju&#380; zniszczone, funkcja zwraca 
+  false.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="server-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Oct  7 16:28:39 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

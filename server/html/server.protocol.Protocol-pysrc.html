@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>server.protocol.Protocol</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="server-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="server-module.html">Package&nbsp;server</a> ::
+        <a href="server.protocol-module.html">Package&nbsp;protocol</a> ::
+        Module&nbsp;Protocol
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="server.protocol.Protocol-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="server.protocol.Protocol-module.html">Module server.protocol.Protocol</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Encoding: utf-8</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package server.protocol=server.protocol-module.html"><a title="server.protocol" class="py-name" href="#" onclick="return doclink('link-0', 'protocol', 'link-0');">protocol</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Module server.protocol.PacketWriter=server.protocol.PacketWriter-module.html,Class server.protocol.PacketWriter.PacketWriter=server.protocol.PacketWriter.PacketWriter-class.html"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-1', 'PacketWriter', 'link-1');">PacketWriter</a></tt> <tt class="py-keyword">import</tt> <tt id="link-2" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-2', 'PacketWriter', 'link-1');">PacketWriter</a></tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name"><a title="server.protocol" class="py-name" href="#" onclick="return doclink('link-3', 'protocol', 'link-0');">protocol</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Module server.protocol.PacketReader=server.protocol.PacketReader-module.html,Class server.protocol.PacketReader.PacketReader=server.protocol.PacketReader.PacketReader-class.html"><a title="server.protocol.PacketReader
+server.protocol.PacketReader.PacketReader" class="py-name" href="#" onclick="return doclink('link-4', 'PacketReader', 'link-4');">PacketReader</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name"><a title="server.protocol.PacketReader
+server.protocol.PacketReader.PacketReader" class="py-name" href="#" onclick="return doclink('link-5', 'PacketReader', 'link-4');">PacketReader</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name" targets="Module server.Logger=server.Logger-module.html,Class server.Logger.Logger=server.Logger.Logger-class.html"><a title="server.Logger
+server.Logger.Logger" class="py-name" href="#" onclick="return doclink('link-6', 'Logger', 'link-6');">Logger</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name"><a title="server.Logger
+server.Logger.Logger" class="py-name" href="#" onclick="return doclink('link-7', 'Logger', 'link-6');">Logger</a></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">struct</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="Protocol"></a><div id="Protocol-def"><a name="L8"></a><tt class="py-lineno">  8</tt> <a class="py-toggle" href="#" id="Protocol-toggle" onclick="return toggle('Protocol');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html">Protocol</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="Protocol-expanded"><a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line">  <tt class="py-docstring">"""</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">  Klasa ta tworzy protok&#243;&#322; i obs&#322;uguje pakiety.</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.__init__"></a><div id="Protocol.__init__-def"><a name="L13"></a><tt class="py-lineno"> 13</tt> <a class="py-toggle" href="#" id="Protocol.__init__-toggle" onclick="return toggle('Protocol.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">gamestate</tt><tt class="py-op">,</tt> <tt class="py-param">client_socks</tt><tt class="py-op">,</tt> <tt class="py-param">client_queues</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.__init__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.__init__-expanded"><a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    Inicjalizuje obiekt protoko&#322;u.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_clients</tt> <tt class="py-op">=</tt> <tt class="py-name">client_socks</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_queues</tt> <tt class="py-op">=</tt> <tt class="py-name">client_queues</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt> <tt class="py-op">=</tt> <tt class="py-name">gamestate</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.handle"></a><div id="Protocol.handle-def"><a name="L22"></a><tt class="py-lineno"> 22</tt> <a class="py-toggle" href="#" id="Protocol.handle-toggle" onclick="return toggle('Protocol.handle');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#handle">handle</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fno</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.handle-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.handle-expanded"><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">    Obs&#322;uguje dane wys&#322;ane DO serwera.</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">    Dane rozpoznawane s&#261; za pomoc&#261; header&#243;w pakiet&#243;w. Po wi&#281;cej informacji</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">    na temat budowy pakietu nale&#380;y przeczyta&#263; plik PACKETS do&#322;&#261;czony do</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">    kodu &#378;r&#243;d&#322;owego.</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">    <tt class="py-name">pack</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method server.protocol.Protocol.Protocol.__get_pack()=server.protocol.Protocol.Protocol-class.html#__get_pack"><a title="server.protocol.Protocol.Protocol.__get_pack" class="py-name" href="#" onclick="return doclink('link-8', '__get_pack', 'link-8');">__get_pack</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_clients</tt><tt class="py-op">[</tt><tt class="py-name">fno</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">    <tt class="py-name">read</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="server.protocol.PacketReader
+server.protocol.PacketReader.PacketReader" class="py-name" href="#" onclick="return doclink('link-9', 'PacketReader', 'link-4');">PacketReader</a></tt><tt class="py-op">(</tt><tt class="py-name">pack</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">read</tt><tt class="py-op">.</tt><tt class="py-name">header</tt> <tt class="py-op">==</tt> <tt class="py-number">0xC2</tt><tt class="py-op">:</tt> <tt class="py-comment"># Get Status</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method server.GameState.GameState.playing_game()=server.GameState.GameState-class.html#playing_game"><a title="server.GameState.GameState.playing_game" class="py-name" href="#" onclick="return doclink('link-10', 'playing_game', 'link-10');">playing_game</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method server.protocol.Protocol.Protocol.push_error()=server.protocol.Protocol.Protocol-class.html#push_error"><a title="server.protocol.Protocol.Protocol.push_error" class="py-name" href="#" onclick="return doclink('link-11', 'push_error', 'link-11');">push_error</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-number">0xE1</tt><tt class="py-op">)</tt> <tt class="py-comment"># B&#322;&#261;d o niemo&#380;no&#347;ci wykonania akcji.</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">      <tt class="py-name">player</tt> <tt class="py-op">=</tt> <tt class="py-name">read</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method server.protocol.PacketReader.PacketReader.get_uint()=server.protocol.PacketReader.PacketReader-class.html#get_uint"><a title="server.protocol.PacketReader.PacketReader.get_uint" class="py-name" href="#" onclick="return doclink('link-12', 'get_uint', 'link-12');">get_uint</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">      <tt class="py-name">ships</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method server.GameState.GameState.get_ships()=server.GameState.GameState-class.html#get_ships"><a title="server.GameState.GameState.get_ships" class="py-name" href="#" onclick="return doclink('link-13', 'get_ships', 'link-13');">get_ships</a></tt><tt class="py-op">(</tt><tt class="py-name">player</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">      <tt class="py-name">wri</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-14', 'PacketWriter', 'link-1');">PacketWriter</a></tt><tt class="py-op">(</tt><tt class="py-number">0xA2</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">      <tt class="py-name">ret</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">      <tt class="py-keyword">for</tt> <tt class="py-name">ship</tt> <tt class="py-keyword">in</tt> <tt class="py-name">ships</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt id="link-15" class="py-name" targets="Method server.objects.Ship.Ship.tiles()=server.objects.Ship.Ship-class.html#tiles"><a title="server.objects.Ship.Ship.tiles" class="py-name" href="#" onclick="return doclink('link-15', 'tiles', 'link-15');">tiles</a></tt> <tt class="py-op">=</tt> <tt class="py-name">ship</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="server.objects.Ship.Ship.tiles" class="py-name" href="#" onclick="return doclink('link-16', 'tiles', 'link-15');">tiles</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">tx</tt><tt class="py-op">,</tt><tt class="py-name">ty</tt> <tt class="py-keyword">in</tt> <tt id="link-17" class="py-name"><a title="server.objects.Ship.Ship.tiles" class="py-name" href="#" onclick="return doclink('link-17', 'tiles', 'link-15');">tiles</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">          <tt class="py-name">ret</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">tx</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">          <tt class="py-name">ret</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">ty</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">          <tt class="py-keyword">if</tt> <tt class="py-name">ship</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Method server.objects.Ship.Ship.tile_destroyed()=server.objects.Ship.Ship-class.html#tile_destroyed"><a title="server.objects.Ship.Ship.tile_destroyed" class="py-name" href="#" onclick="return doclink('link-18', 'tile_destroyed', 'link-18');">tile_destroyed</a></tt><tt class="py-op">(</tt><tt class="py-name">tx</tt><tt class="py-op">,</tt><tt class="py-name">ty</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">            <tt class="py-name">ret</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">          <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">            <tt class="py-name">ret</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">      <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method server.protocol.PacketWriter.PacketWriter.push_uint()=server.protocol.PacketWriter.PacketWriter-class.html#push_uint"><a title="server.protocol.PacketWriter.PacketWriter.push_uint" class="py-name" href="#" onclick="return doclink('link-19', 'push_uint', 'link-19');">push_uint</a></tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">ret</tt><tt class="py-op">)</tt><tt class="py-op">//</tt><tt class="py-number">3</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">      <tt class="py-keyword">for</tt> <tt class="py-name">r</tt> <tt class="py-keyword">in</tt> <tt class="py-name">ret</tt><tt class="py-op">:</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.push_uint" class="py-name" href="#" onclick="return doclink('link-20', 'push_uint', 'link-19');">push_uint</a></tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method server.protocol.Protocol.Protocol.push()=server.protocol.Protocol.Protocol-class.html#push"><a title="server.protocol.Protocol.Protocol.push" class="py-name" href="#" onclick="return doclink('link-21', 'push', 'link-21');">push</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method server.protocol.PacketWriter.PacketWriter.serialize()=server.protocol.PacketWriter.PacketWriter-class.html#serialize"><a title="server.protocol.PacketWriter.PacketWriter.serialize" class="py-name" href="#" onclick="return doclink('link-22', 'serialize', 'link-22');">serialize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">    <tt class="py-keyword">elif</tt> <tt class="py-name">read</tt><tt class="py-op">.</tt><tt class="py-name">header</tt> <tt class="py-op">==</tt> <tt class="py-number">0xC1</tt><tt class="py-op">:</tt> <tt class="py-comment"># Shoot</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="server.GameState.GameState.playing_game" class="py-name" href="#" onclick="return doclink('link-23', 'playing_game', 'link-10');">playing_game</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="server.protocol.Protocol.Protocol.push_error" class="py-name" href="#" onclick="return doclink('link-24', 'push_error', 'link-11');">push_error</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-number">0xE1</tt><tt class="py-op">)</tt> <tt class="py-comment"># B&#322;&#261;d o niemo&#380;no&#347;ci wykonania akcji.</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">      <tt class="py-name">player</tt> <tt class="py-op">=</tt> <tt class="py-name">read</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="server.protocol.PacketReader.PacketReader.get_uint" class="py-name" href="#" onclick="return doclink('link-25', 'get_uint', 'link-12');">get_uint</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-name">player</tt> <tt class="py-op">!=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name" targets="Method server.GameState.GameState.turn()=server.GameState.GameState-class.html#turn"><a title="server.GameState.GameState.turn" class="py-name" href="#" onclick="return doclink('link-26', 'turn', 'link-26');">turn</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="server.protocol.Protocol.Protocol.push_error" class="py-name" href="#" onclick="return doclink('link-27', 'push_error', 'link-11');">push_error</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-number">0xE1</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">      <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt> <tt class="py-op">=</tt> <tt class="py-name">read</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="server.protocol.PacketReader.PacketReader.get_uint" class="py-name" href="#" onclick="return doclink('link-28', 'get_uint', 'link-12');">get_uint</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">read</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="server.protocol.PacketReader.PacketReader.get_uint" class="py-name" href="#" onclick="return doclink('link-29', 'get_uint', 'link-12');">get_uint</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">0</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">x</tt> <tt class="py-op">&lt;=</tt> <tt class="py-number">8</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-op">(</tt><tt class="py-number">0</tt> <tt class="py-op">&lt;=</tt> <tt class="py-name">y</tt> <tt class="py-op">&lt;=</tt> <tt class="py-number">8</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">          <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="server.protocol.Protocol.Protocol.push_error" class="py-name" href="#" onclick="return doclink('link-30', 'push_error', 'link-11');">push_error</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-number">0xE2</tt><tt class="py-op">)</tt> <tt class="py-comment"># Nieprawid&#322;owa pozycja</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">          <tt class="py-keyword">return</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">  </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">match</tt> <tt class="py-op">=</tt> <tt class="py-string">'%s%d'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">chr</tt><tt class="py-op">(</tt><tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-string">'A'</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">x</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">y</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt id="link-31" class="py-name"><a title="server.Logger
+server.Logger.Logger" class="py-name" href="#" onclick="return doclink('link-31', 'Logger', 'link-6');">Logger</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Static Method server.Logger.Logger.log()=server.Logger.Logger-class.html#log"><a title="server.Logger.Logger.log" class="py-name" href="#" onclick="return doclink('link-32', 'log', 'link-32');">log</a></tt><tt class="py-op">(</tt><tt class="py-string">"Gracz #%d strzela w %s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">player</tt><tt class="py-op">,</tt> <tt class="py-name">match</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">ret</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method server.GameState.GameState.shoot()=server.GameState.GameState-class.html#shoot"><a title="server.GameState.GameState.shoot" class="py-name" href="#" onclick="return doclink('link-33', 'shoot', 'link-33');">shoot</a></tt><tt class="py-op">(</tt><tt class="py-name">player</tt><tt class="py-op">,</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-name">wri</tt> <tt class="py-op">=</tt> <tt id="link-34" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-34', 'PacketWriter', 'link-1');">PacketWriter</a></tt><tt class="py-op">(</tt><tt class="py-number">0xA1</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.push_uint" class="py-name" href="#" onclick="return doclink('link-35', 'push_uint', 'link-19');">push_uint</a></tt><tt class="py-op">(</tt><tt class="py-name">player</tt><tt class="py-op">)</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.push_uint" class="py-name" href="#" onclick="return doclink('link-36', 'push_uint', 'link-19');">push_uint</a></tt><tt class="py-op">(</tt><tt class="py-name">ret</tt><tt class="py-op">)</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name" targets="Method server.protocol.Protocol.Protocol.push_all()=server.protocol.Protocol.Protocol-class.html#push_all"><a title="server.protocol.Protocol.Protocol.push_all" class="py-name" href="#" onclick="return doclink('link-37', 'push_all', 'link-37');">push_all</a></tt><tt class="py-op">(</tt><tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.serialize" class="py-name" href="#" onclick="return doclink('link-38', 'serialize', 'link-22');">serialize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">ret</tt> <tt class="py-op">!=</tt> <tt class="py-number">2</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">          <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_gamestate</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Method server.GameState.GameState.toggle_turn()=server.GameState.GameState-class.html#toggle_turn"><a title="server.GameState.GameState.toggle_turn" class="py-name" href="#" onclick="return doclink('link-39', 'toggle_turn', 'link-39');">toggle_turn</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.push_error"></a><div id="Protocol.push_error-def"><a name="L86"></a><tt class="py-lineno"> 86</tt> <a class="py-toggle" href="#" id="Protocol.push_error-toggle" onclick="return toggle('Protocol.push_error');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#push_error">push_error</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fno</tt><tt class="py-op">,</tt> <tt class="py-param">head</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.push_error-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.push_error-expanded"><a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-docstring">    Klasa wysy&#322;aj&#261;ca elementarne pakiety na temat b&#322;&#281;d&#243;w.</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt class="py-docstring">    Konwencja jest nast&#281;puj&#261;ca: S&#261; to pakiety nie zawieraj&#261;ce danych i</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-docstring">    posiadaj&#261;ce header 0xE[numer]. Nie jest to jednak &#380;adna regu&#322;a.</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">    <tt class="py-name">wri</tt> <tt class="py-op">=</tt> <tt id="link-40" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-40', 'PacketWriter', 'link-1');">PacketWriter</a></tt><tt class="py-op">(</tt><tt class="py-name">head</tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="server.protocol.Protocol.Protocol.push" class="py-name" href="#" onclick="return doclink('link-41', 'push', 'link-21');">push</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.serialize" class="py-name" href="#" onclick="return doclink('link-42', 'serialize', 'link-22');">serialize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.__get_pack"></a><div id="Protocol.__get_pack-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="Protocol.__get_pack-toggle" onclick="return toggle('Protocol.__get_pack');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#__get_pack">__get_pack</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sock</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.__get_pack-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.__get_pack-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt class="py-docstring">    Pobiera pojedy&#324;czy pakiet od klienta, zak&#322;adaj&#261;c &#380;e ten istnieje.</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-docstring">    Zwraca ci&#261;g danych binarnych, kt&#243;ry jest pakietem i mo&#380;e zosta&#263; przeczytany.</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-name">packet_id</tt><tt class="py-op">,</tt> <tt class="py-name">packet_size</tt> <tt class="py-op">=</tt> <tt class="py-name">sock</tt><tt class="py-op">.</tt><tt class="py-name">recv</tt><tt class="py-op">(</tt><tt class="py-number">2</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">sock</tt><tt class="py-op">.</tt><tt class="py-name">recv</tt><tt class="py-op">(</tt><tt class="py-number">4</tt><tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">    <tt class="py-name">data_size</tt> <tt class="py-op">=</tt> <tt class="py-name">struct</tt><tt class="py-op">.</tt><tt class="py-name">unpack</tt><tt class="py-op">(</tt><tt class="py-string">'!I'</tt><tt class="py-op">,</tt> <tt class="py-name">packet_size</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt class="py-name">packet_data</tt> <tt class="py-op">=</tt> <tt class="py-string">''</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-comment"># FIX: Recv(0) czeka w niesko&#324;czono&#347;&#263;, musimy to wyifowa&#263;.</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">data_size</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">      <tt class="py-name">packet_data</tt> <tt class="py-op">=</tt> <tt class="py-name">sock</tt><tt class="py-op">.</tt><tt class="py-name">recv</tt><tt class="py-op">(</tt><tt class="py-name">data_size</tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">packet_id</tt> <tt class="py-op">+</tt> <tt class="py-name">packet_size</tt> <tt class="py-op">+</tt> <tt class="py-name">packet_data</tt> </tt>
+</div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.push"></a><div id="Protocol.push-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="Protocol.push-toggle" onclick="return toggle('Protocol.push');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#push">push</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fno</tt><tt class="py-op">,</tt> <tt class="py-param">packet</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.push-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.push-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">    Wrzuca na odpowiedni&#261; kolejk&#281; pakiet&#243;w do wys&#322;ania odpowiednie dane.</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">    <tt id="link-43" class="py-name"><a title="server.Logger
+server.Logger.Logger" class="py-name" href="#" onclick="return doclink('link-43', 'Logger', 'link-6');">Logger</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="server.Logger.Logger.log" class="py-name" href="#" onclick="return doclink('link-44', 'log', 'link-32');">log</a></tt><tt class="py-op">(</tt><tt class="py-string">'Puszczamy pakiet...'</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_queues</tt><tt class="py-op">[</tt><tt class="py-name">fno</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">packet</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.push_all"></a><div id="Protocol.push_all-def"><a name="L121"></a><tt class="py-lineno">121</tt> <a class="py-toggle" href="#" id="Protocol.push_all-toggle" onclick="return toggle('Protocol.push_all');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#push_all">push_all</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">packet</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.push_all-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.push_all-expanded"><a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">    Wrzuca na wszystkie kolejki pakiet&#243;w odpowiedni pakiet do wys&#322;ania.</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">    <tt id="link-45" class="py-name"><a title="server.Logger
+server.Logger.Logger" class="py-name" href="#" onclick="return doclink('link-45', 'Logger', 'link-6');">Logger</a></tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="server.Logger.Logger.log" class="py-name" href="#" onclick="return doclink('link-46', 'log', 'link-32');">log</a></tt><tt class="py-op">(</tt><tt class="py-string">'Puszczamy pakiet WSZYSTKIM...'</tt><tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">client</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_clients</tt><tt class="py-op">:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_queues</tt><tt class="py-op">[</tt><tt class="py-name">client</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">packet</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.push_player"></a><div id="Protocol.push_player-def"><a name="L130"></a><tt class="py-lineno">130</tt> <a class="py-toggle" href="#" id="Protocol.push_player-toggle" onclick="return toggle('Protocol.push_player');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#push_player">push_player</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">fno</tt><tt class="py-op">,</tt> <tt class="py-param">player</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.push_player-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.push_player-expanded"><a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-docstring">    Wysy&#322;a informacje na temat numeru gracza do odpowiedniego socketu.</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">    <tt class="py-name">wri</tt> <tt class="py-op">=</tt> <tt id="link-47" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-47', 'PacketWriter', 'link-1');">PacketWriter</a></tt><tt class="py-op">(</tt><tt class="py-number">0xA3</tt><tt class="py-op">)</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">    <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.push_uint" class="py-name" href="#" onclick="return doclink('link-48', 'push_uint', 'link-19');">push_uint</a></tt><tt class="py-op">(</tt><tt class="py-name">player</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="server.protocol.Protocol.Protocol.push" class="py-name" href="#" onclick="return doclink('link-49', 'push', 'link-21');">push</a></tt><tt class="py-op">(</tt><tt class="py-name">fno</tt><tt class="py-op">,</tt> <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.serialize" class="py-name" href="#" onclick="return doclink('link-50', 'serialize', 'link-22');">serialize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.push_complete"></a><div id="Protocol.push_complete-def"><a name="L140"></a><tt class="py-lineno">140</tt> <a class="py-toggle" href="#" id="Protocol.push_complete-toggle" onclick="return toggle('Protocol.push_complete');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#push_complete">push_complete</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">loser</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.push_complete-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.push_complete-expanded"><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-docstring">    Wysy&#322;a pakiet na temat zako&#324;czenia gry, wraz z informacj&#261; kto przegra&#322;.</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt class="py-name">wri</tt> <tt class="py-op">=</tt> <tt id="link-51" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-51', 'PacketWriter', 'link-1');">PacketWriter</a></tt><tt class="py-op">(</tt><tt class="py-number">0xA4</tt><tt class="py-op">)</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.push_uint" class="py-name" href="#" onclick="return doclink('link-52', 'push_uint', 'link-19');">push_uint</a></tt><tt class="py-op">(</tt><tt class="py-name">loser</tt><tt class="py-op">)</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">     </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="server.protocol.Protocol.Protocol.push_all" class="py-name" href="#" onclick="return doclink('link-53', 'push_all', 'link-37');">push_all</a></tt><tt class="py-op">(</tt><tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.serialize" class="py-name" href="#" onclick="return doclink('link-54', 'serialize', 'link-22');">serialize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
+<a name="Protocol.push_start"></a><div id="Protocol.push_start-def"><a name="L150"></a><tt class="py-lineno">150</tt> <a class="py-toggle" href="#" id="Protocol.push_start-toggle" onclick="return toggle('Protocol.push_start');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="server.protocol.Protocol.Protocol-class.html#push_start">push_start</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Protocol.push_start-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="Protocol.push_start-expanded"><a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-docstring">    Wysy&#322;a pakiet z informacj&#261;, &#380;e gra si&#281; rozpocz&#281;&#322;a.</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">    <tt class="py-name">wri</tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name"><a title="server.protocol.PacketWriter
+server.protocol.PacketWriter.PacketWriter" class="py-name" href="#" onclick="return doclink('link-55', 'PacketWriter', 'link-1');">PacketWriter</a></tt><tt class="py-op">(</tt><tt class="py-number">0xA5</tt><tt class="py-op">)</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-56" class="py-name"><a title="server.protocol.Protocol.Protocol.push_all" class="py-name" href="#" onclick="return doclink('link-56', 'push_all', 'link-37');">push_all</a></tt><tt class="py-op">(</tt><tt class="py-name">wri</tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="server.protocol.PacketWriter.PacketWriter.serialize" class="py-name" href="#" onclick="return doclink('link-57', 'serialize', 'link-22');">serialize</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="server-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Oct  7 16:28:40 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

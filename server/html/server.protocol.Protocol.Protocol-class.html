@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>server.protocol.Protocol.Protocol</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="server-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="server-module.html">Package&nbsp;server</a> ::
+        <a href="server.protocol-module.html">Package&nbsp;protocol</a> ::
+        <a href="server.protocol.Protocol-module.html">Module&nbsp;Protocol</a> ::
+        Class&nbsp;Protocol
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="server.protocol.Protocol.Protocol-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Protocol</h1><p class="nomargin-top"><span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_server_p_2" name="uml_class_diagram_for_server_p_2">
+<area shape="rect" id="node1_8" href="server.protocol.Protocol.Protocol-class.html#__init__" title="Inicjalizuje obiekt protoko&#322;u." alt="" coords="17,39,337,57"/>
+<area shape="rect" id="node1_9" href="server.protocol.Protocol.Protocol-class.html#handle" title="Obs&#322;uguje dane wys&#322;ane DO serwera." alt="" coords="17,57,337,76"/>
+<area shape="rect" id="node1_10" href="server.protocol.Protocol.Protocol-class.html#push_error" title="Klasa wysy&#322;aj&#261;ca elementarne pakiety na temat b&#322;&#281;d&#243;w." alt="" coords="17,76,337,95"/>
+<area shape="rect" id="node1_11" href="server.protocol.Protocol.Protocol-class.html#push" title="Wrzuca na odpowiedni&#261; kolejk&#281; pakiet&#243;w do wys&#322;ania odpowiednie dane." alt="" coords="17,95,337,113"/>
+<area shape="rect" id="node1_12" href="server.protocol.Protocol.Protocol-class.html#push_all" title="Wrzuca na wszystkie kolejki pakiet&#243;w odpowiedni pakiet do wys&#322;ania." alt="" coords="17,113,337,132"/>
+<area shape="rect" id="node1_13" href="server.protocol.Protocol.Protocol-class.html#push_player" title="Wysy&#322;a informacje na temat numeru gracza do odpowiedniego socketu." alt="" coords="17,132,337,151"/>
+<area shape="rect" id="node1_14" href="server.protocol.Protocol.Protocol-class.html#push_complete" title="Wysy&#322;a pakiet na temat zako&#324;czenia gry, wraz z informacj&#261; kto przegra&#322;." alt="" coords="17,151,337,169"/>
+<area shape="rect" id="node1_15" href="server.protocol.Protocol.Protocol-class.html#push_start" title="Wysy&#322;a pakiet z informacj&#261;, &#380;e gra si&#281; rozpocz&#281;&#322;a." alt="" coords="17,169,337,188"/>
+<area shape="rect" id="node1" href="server.protocol.Protocol.Protocol-class.html" title="Klasa ta tworzy protok&#243;&#322; i obs&#322;uguje pakiety." alt="" coords="5,6,349,194"/>
+</map>
+  <img src="uml_class_diagram_for_server_p_2.gif" alt='' usemap="#uml_class_diagram_for_server_p_2" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Klasa ta tworzy protok&#243;&#322; i obs&#322;uguje pakiety.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.protocol.Protocol.Protocol-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gamestate</span>,
+        <span class="summary-sig-arg">client_socks</span>,
+        <span class="summary-sig-arg">client_queues</span>)</span><br />
+      Inicjalizuje obiekt protoko&#322;u.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.protocol.Protocol.Protocol-class.html#handle" class="summary-sig-name">handle</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fno</span>)</span><br />
+      Obs&#322;uguje dane wys&#322;ane DO serwera.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.handle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.protocol.Protocol.Protocol-class.html#push_error" class="summary-sig-name">push_error</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fno</span>,
+        <span class="summary-sig-arg">head</span>)</span><br />
+      Klasa wysy&#322;aj&#261;ca elementarne pakiety na temat b&#322;&#281;d&#243;w.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push_error">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="server.protocol.Protocol.Protocol-class.html#__get_pack" class="summary-sig-name" onclick="show_private();">__get_pack</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sock</span>)</span><br />
+      Pobiera pojedy&#324;czy pakiet od klienta, zak&#322;adaj&#261;c &#380;e ten istnieje.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.__get_pack">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="push"></a><span class="summary-sig-name">push</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fno</span>,
+        <span class="summary-sig-arg">packet</span>)</span><br />
+      Wrzuca na odpowiedni&#261; kolejk&#281; pakiet&#243;w do wys&#322;ania odpowiednie dane.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="push_all"></a><span class="summary-sig-name">push_all</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">packet</span>)</span><br />
+      Wrzuca na wszystkie kolejki pakiet&#243;w odpowiedni pakiet do wys&#322;ania.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push_all">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="push_player"></a><span class="summary-sig-name">push_player</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fno</span>,
+        <span class="summary-sig-arg">player</span>)</span><br />
+      Wysy&#322;a informacje na temat numeru gracza do odpowiedniego socketu.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push_player">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="push_complete"></a><span class="summary-sig-name">push_complete</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">loser</span>)</span><br />
+      Wysy&#322;a pakiet na temat zako&#324;czenia gry, wraz z informacj&#261; kto 
+      przegra&#322;.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push_complete">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="push_start"></a><span class="summary-sig-name">push_start</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Wysy&#322;a pakiet z informacj&#261;, &#380;e gra si&#281; rozpocz&#281;&#322;a.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push_start">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gamestate</span>,
+        <span class="sig-arg">client_socks</span>,
+        <span class="sig-arg">client_queues</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Inicjalizuje obiekt protoko&#322;u.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="handle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">handle</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fno</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.handle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Obs&#322;uguje dane wys&#322;ane DO serwera.</p>
+  <p>Dane rozpoznawane s&#261; za pomoc&#261; header&#243;w pakiet&#243;w. Po wi&#281;cej informacji
+  na temat budowy pakietu nale&#380;y przeczyta&#263; plik PACKETS do&#322;&#261;czony do kodu 
+  &#378;r&#243;d&#322;owego.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="push_error"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">push_error</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fno</span>,
+        <span class="sig-arg">head</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.push_error">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Klasa wysy&#322;aj&#261;ca elementarne pakiety na temat b&#322;&#281;d&#243;w.</p>
+  <p>Konwencja jest nast&#281;puj&#261;ca: S&#261; to pakiety nie zawieraj&#261;ce danych i 
+  posiadaj&#261;ce header 0xE[numer]. Nie jest to jednak &#380;adna regu&#322;a.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__get_pack"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__get_pack</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sock</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="server.protocol.Protocol-pysrc.html#Protocol.__get_pack">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Pobiera pojedy&#324;czy pakiet od klienta, zak&#322;adaj&#261;c &#380;e ten istnieje.</p>
+  <p>Zwraca ci&#261;g danych binarnych, kt&#243;ry jest pakietem i mo&#380;e zosta&#263; 
+  przeczytany.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="server-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun Oct  7 16:28:40 2012
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

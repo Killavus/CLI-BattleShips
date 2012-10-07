@@ -18,6 +18,9 @@ if not "EPOLLRDHUP" in dir(select):
   select.EPOLLRDHUP = 0x2000
 
 class Server(object):
+  """
+  Klasa serwera zajmuje się zarządzaniem połączeniami.
+  """
   def __init__(self):
     """
     Konstruktor klasy.
