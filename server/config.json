@@ -1,0 +1,18 @@
+{
+  "player_0": {
+    "ship1": 3,
+    "ship2": 2,
+    "ship3": 2,
+    "ship4": 1
+  },
+  "player_1": {
+    "ship1": 3,
+    "ship2": 2,
+    "ship3": 2,
+    "ship4": 1
+  },
+  "connection": {
+    "host": "127.0.0.1",
+    "port": 8080
+  }
+}
